@@ -3,6 +3,8 @@ import Search from './components/Search';
 import Results from './components/Results';
 import Popup from './components/Popup';
 import Nav from './components/Nav';
+import Carousel from './components/Carousel';
+import Facts from './components/Facts';
 import axios from 'axios';
 import './App.css';
 
@@ -64,7 +66,9 @@ function App() {
       <main>
         <Nav search = {search} handleInput = {handleInput}/>
         {/* <Search search = {search} handleInput = {handleInput}/> */}
-        {(typeof state.selected.strDrink != "undefined") ? <Popup selected={state.selected} closePopup = {closePopup}/> : <Results results = {state.results} openPopup = {openPopup}/>}
+        {/* <Carousel /> */}
+        { state.results.length === 0 ? <Facts /> : <Results results = {state.results} openPopup = {openPopup}/>}
+        {(typeof state.selected.strDrink != "undefined") ? <Popup selected={state.selected} closePopup = {closePopup}/> : ""}
       </main>
     </div>
   );

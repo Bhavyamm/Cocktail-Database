@@ -4,13 +4,14 @@ import '../css/Nav.css';
 
 function Nav({ search, handleInput }) {
     return (
-        <div className = "nav">
+        <div className = "nav__background">
             <div className = "nav__main">
                 <h1 className = "nav__logo">
                     Cocktail Database
                 </h1>
+                <img className = "nav__logoIcon" src="https://img.icons8.com/dusk/64/000000/cocktail.png"/>
 
-                <div className = "container">
+                <div className = "nav_container">
                     <input type = "text" placeholder = "Search..." className = "search__input" onKeyPress = {search} onChange = {handleInput}/>
                     <div className = "search" />
                 </div>
@@ -18,7 +19,7 @@ function Nav({ search, handleInput }) {
             <div className="nav__header">
                 <div className="nav__container">
                     <div>
-                        <h1 className = "nav__text">Make your favorite drink right away!</h1>
+                        <h3 className = "nav__text">Make your favorite drink right away!</h3>
                     </div>
                     <img className = "nav__headerImage" src={header_image} alt="" />
                 </div>
