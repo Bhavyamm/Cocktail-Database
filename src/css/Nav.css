@@ -1,5 +1,6 @@
 .nav__background {
-  background: linear-gradient(#14505c, #fff);
+  /* background: linear-gradient(#14505c, #fff); */
+  background: #14505c;
 }
 
 .nav__main {
@@ -28,7 +29,12 @@
 
 .nav__header {
   color: #fff;
-  padding: 2rem 0;
+  padding-top: 2rem;
+  padding-bottom: 0.01rem;
+  padding-left: 0;
+  padding-right: 0;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .nav__header .nav__container {
@@ -77,7 +83,7 @@
   left: 0;
   width: 80px;
   height: 80px;
-  background:#7399b0;
+  background: #7399b0;
   border-radius: 50%;
   transition: all 1s;
   z-index: 4;

@@ -4,17 +4,15 @@ import '../css/Popup.css';
 function Popup({ selected, closePopup }) {
     return (
         <section className = "popup">
-            <div className = "content">
+            <div className = "popup__content">
                 <h2>{selected.strDrink}</h2>
 
-                <div className = "info">
+                <div className = "popup__info">
                     <img src = {selected.strDrinkThumb} />
-                    <div className = "description">
-                        <h3>How To Make {selected.strDrink}</h3>
-                        <p>{selected.strInstructions}</p>
-                        <br />
+                    <div className = "popup__description">
+                        
                         <h3>Ingredients</h3>
-                        <div className = "ingredients">
+                        <div className = "popup__ingredients">
                             {selected.strIngredient1 != null || selected.strMeasure1 != null ? <p>1. {selected.strIngredient1} - {selected.strMeasure1}</p> : <p></p>}
                             {selected.strIngredient2 != null || selected.strMeasure2 != null ? <p>2. {selected.strIngredient2} - {selected.strMeasure2}</p> : <p></p>}
                             {selected.strIngredient3 != null || selected.strMeasure3 != null ? <p>3. {selected.strIngredient3} - {selected.strMeasure3}</p> : <p></p>}
@@ -31,12 +29,18 @@ function Popup({ selected, closePopup }) {
                             {selected.strIngredient14 != null || selected.strMeasure14 != null ? <p>14. {selected.strIngredient14} - {selected.strMeasure14}</p> : <p></p>}
                             {selected.strIngredient15 != null || selected.strMeasure15 != null ? <p>15. {selected.strIngredient15} - {selected.strMeasure15}</p> : <p></p>}
                         </div>
+
+                        <br />
+
+
+                        <h3>How To Make {selected.strDrink}</h3>
+                        <p>{selected.strInstructions}</p>
                         
 
                     </div>
                 </div>
                 
-                <button className="close" onClick={closePopup}>Close</button>
+                <button className="popup__close" onClick={closePopup}>Close</button>
             </div>
         </section>
     )

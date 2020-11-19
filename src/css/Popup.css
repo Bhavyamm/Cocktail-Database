@@ -26,14 +26,14 @@ button:focus {
   outline: 0;
 }
 
-button.close {
+button.popup__close {
   border-color: #3498db;
   color: #fff;
   box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
   transition: all 150ms ease-in-out;
 }
 
-button.close:hover {
+button.popup__close:hover {
   box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }
 
@@ -48,7 +48,7 @@ button.close:hover {
   overflow-y: scroll;
 }
 
-.popup .content {
+.popup .popup__content {
   display: block;
   width: 100%;
   max-width: 960px;
@@ -58,38 +58,38 @@ button.close:hover {
   color: #fff;
 }
 
-.popup .content h2 {
+.popup .popup__content h2 {
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.popup .content .info {
+.popup .popup__content .popup__info {
   display: flex;
   flex-wrap: wrap;
   margin: 0px -15px 30px;
 }
 
-.popup .content .info img {
+.popup .popup__content .popup__info img {
   flex: 1 1 50%;
   max-width: 500px;
   padding: 0px 15px;
   object-fit: contain;
 }
 
-.popup .content .info .description {
+.popup .popup__content .popup__info .popup__description {
   flex: 1 1 50%;
   padding: 15px;
 }
 
-.popup .content .info .description h3 {
-    margin-bottom: 10px;
+.popup .popup__content .popup__info .popup__description h3 {
+  margin-bottom: 10px;
 }
 
-.popup .content .info .description p {
-    line-height: 1.3rem;
+.popup .popup__content .popup__info .popup__description p {
+  line-height: 1.3rem;
 }
 
-.popup .content .info .description .ingredients p {
-    margin-bottom: 10px;
+.popup .popup__content .popup__info .popup__description .popup__ingredients p {
+  margin-bottom: 10px;
 }

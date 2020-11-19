@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import Search from './components/Search';
 import Results from './components/Results';
 import Popup from './components/Popup';
 import Nav from './components/Nav';
 import Carousel from './components/Carousel';
-import Facts from './components/Facts';
+import Body from './components/Body';
 import axios from 'axios';
 import './App.css';
 
@@ -65,9 +64,10 @@ function App() {
     <div className="App">
       <main>
         <Nav search = {search} handleInput = {handleInput}/>
-        {/* <Search search = {search} handleInput = {handleInput}/> */}
         {/* <Carousel /> */}
-        { state.results.length === 0 ? <Facts /> : <Results results = {state.results} openPopup = {openPopup}/>}
+        
+        { state.results?.length === 0 ? <Body /> : <Results searchTerm = {state.s} results = {state.results} openPopup = {openPopup}/>}
+        
         {(typeof state.selected.strDrink != "undefined") ? <Popup selected={state.selected} closePopup = {closePopup}/> : ""}
       </main>
     </div>
