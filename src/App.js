@@ -4,6 +4,7 @@ import Popup from './components/Popup';
 import Nav from './components/Nav';
 import Carousel from './components/Carousel';
 import Body from './components/Body';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
 
@@ -63,12 +64,23 @@ function App() {
   return (
     <div className="App">
       <main>
-        <Nav search = {search} handleInput = {handleInput}/>
-        {/* <Carousel /> */}
+        <Router>
+          <Switch>
+
+            <Route path = "/search">
+              {(typeof state.selected.strDrink != "undefined") ? <Popup selected={state.selected} closePopup = {closePopup}/> : ""}
+            </Route>
+
+            <Route path = "/">
+              <Nav search = {search} handleInput = {handleInput}/>
+              
+              { state.results?.length === 0 ? <Body /> : <Results searchTerm = {state.s} results = {state.results} openPopup = {openPopup}/>}
+            </Route>
+              
+          </Switch>
         
-        { state.results?.length === 0 ? <Body /> : <Results searchTerm = {state.s} results = {state.results} openPopup = {openPopup}/>}
+        </Router>
         
-        {(typeof state.selected.strDrink != "undefined") ? <Popup selected={state.selected} closePopup = {closePopup}/> : ""}
       </main>
     </div>
   );

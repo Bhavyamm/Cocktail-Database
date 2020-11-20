@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Popup.css';
 
 function Popup({ selected, closePopup }) {
@@ -39,8 +40,10 @@ function Popup({ selected, closePopup }) {
 
                     </div>
                 </div>
-                
-                <button className="popup__close" onClick={closePopup}>Close</button>
+                <Link to = "/">
+                    <button className="popup__close" onClick={closePopup}>Close</button>
+                </Link>
+
             </div>
         </section>
     )

@@ -12,17 +12,17 @@ function Body() {
 
             <div className = "body__container">
                 <Lemonade className = "body__image"/>
-                <p className = "body__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p className = "body__text">Ever wondered what different types of cocktails tastes like? Then why don't end the curiosity. We provide the recipe of a large variety of cocktails.</p>
             </div>
 
             <div className = "body__container">
-                <p className = "body__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p className = "body__text">But what if you don't take alcohol? Right? Well don't worry, we have the recipe of both alcoholic as well as non-alcoholic drinks. Just search right away.</p>
                 <Cocktail className = "body__imageInverted"/>
             </div>
 
             <div className = "body__container">
                 <Coffee className = "body__image"/>
-                <p className = "body__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p className = "body__text">Bored of drinking that same coffee over and over? Well you'll be surpised to know in how many different ways you can drink it.</p>
             </div>
 
             </div>
